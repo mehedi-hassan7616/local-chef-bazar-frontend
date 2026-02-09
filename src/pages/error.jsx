@@ -25,7 +25,9 @@ export default function ErrorPage() {
           </div>
         </motion.div>
 
-        <h1 className="text-3xl font-bold mb-2">Oops! Something went wrong</h1>
+        <h1 className="text-3xl font-bold mb-2">
+          Oops! Something went wrong here{" "}
+        </h1>
         <p className="text-muted-foreground mb-2">
           We encountered an unexpected error.
         </p>
@@ -38,7 +40,7 @@ export default function ErrorPage() {
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Button onClick={() => window.location.reload()} className="gap-2">
             <RefreshCcw className="h-4 w-4" />
-            Try Again
+            Try Again for find the right path
           </Button>
           <Link to="/">
             <Button variant="outline" className="w-full gap-2">
