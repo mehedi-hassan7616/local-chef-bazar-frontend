@@ -434,7 +434,6 @@ export default function MealDetailsPage() {
                 </div>
               </div>
 
-              {/* Quick Info Grid */}
               <div className="grid sm:grid-cols-2 gap-4 mb-6">
                 <div className="flex items-center gap-3 p-4 rounded-xl bg-muted/50">
                   <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -473,7 +472,7 @@ export default function MealDetailsPage() {
                 </div>
               </div>
 
-              {/* Ingredients */}
+              {/* speatial Ingredients */}
               {meal.ingredients && meal.ingredients.length > 0 && (
                 <div className="mb-6">
                   <h3 className="text-sm font-medium text-muted-foreground mb-3">
