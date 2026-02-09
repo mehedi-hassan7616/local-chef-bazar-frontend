@@ -40,7 +40,6 @@ export default function OrderRequestsPage() {
   const { dbUser } = useAuth();
   const queryClient = useQueryClient();
 
-  // Filter states
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(10);
   const [sort, setSort] = useState("orderTime");
@@ -50,7 +49,6 @@ export default function OrderRequestsPage() {
   const [paymentStatus, setPaymentStatus] = useState("all");
   const [orderStatus, setOrderStatus] = useState("all");
 
-  // Debounce search input
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedSearch((prev) => {
@@ -197,7 +195,6 @@ export default function OrderRequestsPage() {
         </p>
       </motion.div>
 
-      {/* Filters Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
