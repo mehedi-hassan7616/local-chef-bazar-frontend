@@ -63,7 +63,6 @@ export default function CreateMealPage() {
     },
   });
 
-  // Helper function to upload image to ImageBB
   const uploadToImageBB = async (file) => {
     const formData = new FormData();
     formData.append("image", file);
@@ -89,7 +88,6 @@ export default function CreateMealPage() {
 
   const createMealMutation = useMutation({
     mutationFn: async (mealData) => {
-      // Upload image to ImageBB first if exists
       let foodImage = null;
 
       if (imageFile) {
@@ -97,7 +95,6 @@ export default function CreateMealPage() {
         foodImage = uploadResult.imageUrl;
       }
 
-      // Send meal data as JSON
       const { data } = await axiosInstance.post("/meals", {
         ...mealData,
         foodImage,
