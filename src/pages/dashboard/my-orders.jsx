@@ -34,7 +34,6 @@ export default function MyOrdersPage() {
     enabled: !!user?.email,
   });
 
-  // Payment mutation
   const paymentMutation = useMutation({
     mutationFn: async (orderId) => {
       const { data } = await axiosInstance.post(`/payments/create-session`, {
@@ -105,7 +104,6 @@ export default function MyOrdersPage() {
         </p>
       </motion.div>
 
-      {/* Results Summary */}
       {orders.length > 0 && (
         <p className="text-sm text-muted-foreground">
           Total {orders.length} order{orders.length !== 1 ? "s" : ""}
@@ -150,8 +148,7 @@ export default function MyOrdersPage() {
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <CreditCard className="h-4 w-4 text-primary shrink-0" />
                         <span>
-                          Total: $
-                          {(order.price * order.quantity).toFixed(2)}
+                          Total: ${(order.price * order.quantity).toFixed(2)}
                         </span>
                       </div>
                       <div className="flex items-center gap-2 text-muted-foreground">
@@ -159,7 +156,7 @@ export default function MyOrdersPage() {
                         <span className="truncate">
                           {format(
                             new Date(order.orderTime),
-                            "MMM dd, yyyy HH:mm"
+                            "MMM dd, yyyy HH:mm",
                           )}
                         </span>
                       </div>
