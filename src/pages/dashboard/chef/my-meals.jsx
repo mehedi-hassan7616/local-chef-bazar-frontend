@@ -187,7 +187,6 @@ export default function MyMealsPage() {
   return (
     <TooltipProvider>
       <div className="space-y-6">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -206,7 +205,6 @@ export default function MyMealsPage() {
           </div>
         </motion.div>
 
-        {/* Table */}
         {meals.length > 0 ? (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
