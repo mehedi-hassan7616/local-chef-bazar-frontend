@@ -113,7 +113,7 @@ export default function MyMealsPage() {
       toast.error(error.response?.data?.message || "Failed to update meal");
     },
   });
-
+  //handle delete with confirmation
   const handleDelete = async (mealId) => {
     const result = await Swal.fire({
       title: "Delete Meal?",
