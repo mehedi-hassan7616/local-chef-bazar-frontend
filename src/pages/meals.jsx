@@ -64,7 +64,8 @@ export default function MealsPage() {
   });
 
   const meals = data?.meals || data || [];
-  const totalPages = data?.totalPages || Math.ceil((data?.total || 0) / limit) || 1;
+  const totalPages =
+    data?.totalPages || Math.ceil((data?.total || 0) / limit) || 1;
   const totalMeals = data?.total || meals.length;
 
   const handleSortChange = (value) => {
@@ -93,7 +94,6 @@ export default function MealsPage() {
         </div>
       </section>
 
-      {/* Filters and Search */}
       <section className="py-6 border-b bg-background sticky top-16 z-40">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
@@ -158,7 +158,6 @@ export default function MealsPage() {
         </div>
       </section>
 
-      {/* Meals Grid */}
       <section className="py-8 md:py-12">
         <div className="container mx-auto px-4">
           {isLoading ? (
@@ -166,8 +165,12 @@ export default function MealsPage() {
           ) : isError ? (
             <div className="text-center py-16">
               <UtensilsCrossed className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Oops! Something went wrong</h3>
-              <p className="text-muted-foreground">Failed to load meals. Please try again.</p>
+              <h3 className="text-xl font-semibold mb-2">
+                Oops! Something went wrong
+              </h3>
+              <p className="text-muted-foreground">
+                Failed to load meals. Please try again.
+              </p>
             </div>
           ) : meals.length > 0 ? (
             <>
@@ -249,10 +252,7 @@ export default function MealsPage() {
                   : "No meals are available at the moment"}
               </p>
               {debouncedSearch && (
-                <Button
-                  variant="outline"
-                  onClick={() => setSearchQuery("")}
-                >
+                <Button variant="outline" onClick={() => setSearchQuery("")}>
                   Clear Search
                 </Button>
               )}
