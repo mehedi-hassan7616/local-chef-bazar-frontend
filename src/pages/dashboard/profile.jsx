@@ -207,7 +207,6 @@ export default function ProfilePage() {
           </Card>
         </motion.div>
 
-        {/* Actions Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
