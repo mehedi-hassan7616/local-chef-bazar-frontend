@@ -196,7 +196,6 @@ export default function MyReviewsPage() {
         </Card>
       )}
 
-      {/* Edit Dialog */}
       <Dialog
         open={!!editingReview}
         onOpenChange={() => setEditingReview(null)}
