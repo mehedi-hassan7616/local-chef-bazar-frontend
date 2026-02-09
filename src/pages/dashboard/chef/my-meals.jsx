@@ -150,7 +150,6 @@ export default function MyMealsPage() {
     });
   };
 
-  // Calculate stats
   const totalMeals = meals.length;
   const avgRating =
     meals.length > 0
