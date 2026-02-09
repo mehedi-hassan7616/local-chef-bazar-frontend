@@ -20,7 +20,6 @@ import { PageLoader } from "@/components/ui/loading";
 import axiosInstance from "@/lib/axios";
 
 export default function HomePage() {
-  // Fetch daily meals (6 items)
   const { data: meals = [], isLoading: mealsLoading } = useQuery({
     queryKey: ["dailyMeals"],
     queryFn: async () => {
@@ -29,7 +28,6 @@ export default function HomePage() {
     },
   });
 
-  // Fetch customer reviews
   const { data: reviews = [], isLoading: reviewsLoading } = useQuery({
     queryKey: ["customerReviews"],
     queryFn: async () => {
@@ -92,7 +90,7 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
               >
                 <ChefHat className="h-4 w-4" />
-                Homemade with Love
+                Homemade food with Love
               </motion.div>
 
               <motion.h1
@@ -102,7 +100,7 @@ export default function HomePage() {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
               >
                 Discover <span className="text-primary">Delicious</span>{" "}
-                Home-Cooked Meals
+                Home-Cooked and fresh Meals
               </motion.h1>
 
               <motion.p
@@ -157,7 +155,6 @@ export default function HomePage() {
               <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-primary/20 rounded-full blur-3xl" />
               <div className="absolute -top-6 -right-6 w-48 h-48 bg-primary/20 rounded-full blur-3xl" />
 
-              {/* Floating Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -181,7 +178,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-12 border-y bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
